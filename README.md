@@ -1,4 +1,4 @@
-## GitBook For WordPress
+## 《求和!李姐万岁! GitBook For WordPress》
 
 
 ![GitBook For WordPress](https://raw.githubusercontent.com/zhaoolee/gitbook-for-wordpress/main/screenshot.jpg)
