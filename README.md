@@ -1,9 +1,9 @@
 ## GitBook For WordPress
 
 
-![GitBook For WordPress](./screenshot.jpg)
+![GitBook For WordPress](https://raw.githubusercontent.com/zhaoolee/gitBook-for-wordPress/main/screenshot.jpg)
 
-李姐万岁! 这是一个模拟GitBook布局，锤子便签风格的WordPress主题。zhaoolee已用于[方圆小站](https://fangyuanxiaozhan.com)的WordPress
+求和! 李姐万岁! 这是一个模拟GitBook布局，锤子便签风格的WordPress主题。zhaoolee已用于[方圆小站](https://fangyuanxiaozhan.com)的WordPress
 
 ## 示例网站
 
