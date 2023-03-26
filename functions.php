@@ -95,3 +95,32 @@ function mytheme_enqueue_scripts()
   wp_enqueue_script('search-form');
 }
 add_action('wp_enqueue_scripts', 'mytheme_enqueue_scripts');
+
+// 创建个性设置自定义字段用于保存备案信息
+
+function my_customizer_settings($wp_customize) {
+  // 添加自定义部分
+  $wp_customize->add_section('my_custom_section', array(
+      'title' => '《求和!李姐万岁!》个性设置',
+      'priority' => 30,
+  ));
+
+  // 添加自定义设置
+  $wp_customize->add_setting('beian_info', array(
+      'default' => '',
+      'sanitize_callback' => 'sanitize_text_field',
+  ));
+
+  // 添加自定义控件
+  $wp_customize->add_control(new WP_Customize_Control(
+      $wp_customize,
+      'beian_info_control',
+      array(
+          'label' => '备案信息',
+          'section' => 'my_custom_section',
+          'settings' => 'beian_info',
+          'type' => 'text',
+      )
+  ));
+}
+add_action('customize_register', 'my_customizer_settings');
