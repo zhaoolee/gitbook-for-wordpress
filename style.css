@@ -1,0 +1,334 @@
+/*
+Theme Name: GitBook For WordPress
+Theme URI: https://github.com/zhaoolee/gitbook-for-wordpress
+Author: zhaoolee
+Author URI: https://zhaoolee.com
+Description: A WordPress theme inspired by GitBook.
+Version: 0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: my-gitbook-theme
+*/
+
+body {
+  background-color: #fbf7ee !important;
+  color: #635753 !important;
+  font-family: "PingFang SC", "Helvetica Neue", Helvetica, Arial,
+    "Hiragino Sans GB", "Microsoft Yahei", 微软雅黑, STHeiti, 华文细黑,
+    sans-serif;
+  overflow: hidden;
+}
+
+header {
+  border-bottom: 1px solid #e4e8ec;
+}
+
+header .bg-light {
+  background-color: #fbf7ee !important;
+  color: #635753 !important;
+}
+
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-left .navbar-toggler{
+  margin-right: 20px;
+}
+
+.site-left-right-container {
+  display: flex;
+  height: calc(100vh - 56px);
+}
+
+.left-sidebar {
+  flex-basis: 300px;
+  height: calc(100vh - 56px);
+}
+
+.left-sidebar li {
+  list-style-type: none;
+}
+
+.left-sidebar-mobile li {
+  list-style-type: none;
+}
+
+.left-sidebar .left-sidebar-post-list {
+  width: 300px;
+  overflow-y: auto;
+  height: calc(100vh - 56px);
+}
+
+.left-sidebar-mobile .left-sidebar-post-list {
+  width: auto;
+  overflow-y: auto;
+  height: calc(100vh - 56px);
+}
+
+.left-sidebar-container {
+  border-right: 1px solid #e4e8ec;
+}
+
+.left-sidebar-container .list-group-item {
+  border: 0;
+  background-color: #fbf7ee !important;
+  color: #635753 !important;
+}
+
+.left-sidebar-mobile .offcanvas-body {
+  padding: 0;
+  background-color: #fbf7ee !important;
+  color: #635753 !important;
+}
+
+.left-sidebar-mobile li {
+  text-decoration: none;
+}
+
+.left-sidebar li {
+  text-decoration: none;
+}
+
+.left-sidebar-mobile .offcanvas-header {
+  background-color: #fbf7ee !important;
+  color: #635753 !important;
+}
+
+.left-sidebar-post-list .gitbook-active {
+  color: #000;
+  font-weight: bold;
+}
+
+.left-sidebar-post-list .list-group-item {
+  position: relative;
+}
+
+.left-sidebar-post-list .gitbook-active::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  transform: translateY(-50%);
+  font-weight: bold;
+}
+
+.right-content {
+  flex-grow: 1;
+  height: calc(100vh - 56px);
+  overflow: scroll;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  word-wrap: break-word; /* 允许在单词内换行 */
+  white-space: normal; /* 让文本自然换行并合并多个空格 */
+  line-height: 2;
+}
+
+.right-content h2 {
+    line-height: 2;
+}
+
+/* pc */
+@media (min-width: 992px) {
+  .right-content {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+}
+
+/* mobile */
+@media (max-width: 991px) {
+  .right-content {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.right-content img {
+  max-width: 100%;
+  box-shadow: 14px 14px 28px #e6e6e6, -14px -14px 28px #fff;
+  border: 9px solid #ffffff;
+  outline: 1px solid #ebdfd5;
+}
+
+
+
+.right-content pre {
+  background-color: #f6f8fa;
+  border-radius: 3px;
+  font-size: 14px;
+  margin: 0;
+  overflow: auto;
+  padding: 16px;
+}
+
+.right-content code {
+  border-radius: 3px;
+  font-size: 14px;
+  padding: 1px 5px;
+}
+
+.right-content a {
+  text-decoration: none;
+  color: #635753;
+  border-bottom: 1px dashed #635753;
+  transition: border-bottom 0.3s;
+}
+
+.right-content a:hover {
+  border-bottom: 1px solid #635753;
+}
+
+.right-content a:visited,
+a:active {
+  color: #635753;
+}
+
+/* 评论区域 */
+.comments-area {
+  margin-bottom: 30px;
+}
+
+.comments-area h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.commentlist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.commentlist img {
+    max-width: 100%;
+    box-shadow: none;
+    border: none;
+    outline: none;
+}
+
+.comment {
+  padding: 20px;
+  margin-bottom: 10px;
+  background-color: #fbf7ee !important;
+  border-radius: 6px;
+}
+
+.comment-author {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.comment-meta {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.comment-reply-link {
+  font-size: 14px;
+  color: #635753 !important;
+  text-decoration: none;
+}
+
+.comment-reply-link:hover {
+  text-decoration: underline;
+}
+
+.comment-content {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.children {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 20px;
+}
+
+.comment-respond {
+  margin-top: 40px;
+}
+
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-form input[type="text"],
+.comment-form input[type="email"],
+.comment-form input[type="url"],
+.comment-form textarea {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+
+.comment-form input[type="submit"] {
+  font-size: 16px;
+  font-weight: 600;
+  background: -webkit-linear-gradient(top, #827265, #716053);
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.comment-form input[type="submit"]:hover {
+  background-color: #1d1f20;
+}
+
+#wprs_subscribe_to_comment {
+  margin-right: 5px;
+}
+
+.search-form {
+    margin-bottom: 0;
+  display: flex;
+  /* 上下居中 */
+    align-items: center;
+}
+
+
+.search-form input,
+.search-form textarea {
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  width: 100%;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  height: 38px;
+}
+
+.search-form .search-submit {
+  font-size: 16px;
+  font-weight: 600;
+  background: -webkit-linear-gradient(top, #827265, #716053);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 80px;
+}
+
+.search-form .search-submit:hover {
+  background-color: #1d1f20;
+}
