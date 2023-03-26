@@ -1,10 +1,10 @@
 /*
-Theme Name: GitBook For WordPress
+Theme Name: 求和!李姐万岁! GitBook For WordPress
 Theme URI: https://github.com/zhaoolee/gitbook-for-wordpress
 Author: zhaoolee
 Author URI: https://zhaoolee.com
-Description: A WordPress theme inspired by GitBook.
-Version: 0.1
+Description: GitBook布局锤子便签配色的WordPress主题
+Version: 0.1.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: my-gitbook-theme
@@ -331,4 +331,9 @@ a:active {
 
 .search-form .search-submit:hover {
   background-color: #1d1f20;
+}
+
+.search-form input {
+  padding-left: 10px;
+  padding-right: 10px;
 }
