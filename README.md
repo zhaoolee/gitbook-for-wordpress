@@ -41,9 +41,10 @@ zhaoolee喜欢用锤子便签分享内容, 但在社交平台经常分享不出�
 - 支持评论
 - 支持搜索
 - 底部预留备案号位置，支持自定义，不填就不显示
-![](https://user-images.githubusercontent.com/15868458/227777884-ce465a70-8f21-4d8d-b023-08307940dbcd.png)
 
-![](https://user-images.githubusercontent.com/15868458/227777888-64b91530-61ae-4f41-9f6a-a2640ad5d905.png)
+
+![](https://user-images.githubusercontent.com/15868458/227778249-c22c50a4-4924-4548-bd93-662baeffab50.png)
+
 
 
 
