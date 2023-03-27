@@ -25,13 +25,12 @@
 ![1679812197742NJW5ZNBE](https://user-images.githubusercontent.com/15868458/227762298-12e9e3ac-c196-4800-85e1-dd802b4ac4c8.gif)
 
 
-## 为什么要开发这个主题
+## 为什么要开发这个主题？
 
-zhaoolee很喜欢GitBook的布局，左侧目录，右侧文章，这种布局非常适合阅读。
+zhaoolee喜欢用锤子便签分享内容, 但在**社交平台经常分享不出去**, 于是zhaoolee建立了方圆小站, 为了让读者有**类似锤子便签的良好阅读体验**，这个主题便诞生了。
 
-另外配合我以前的开源项目: 用Hexo的方式管理WordPress https://github.com/zhaoolee/WordPressXMLRPCTools (使用Github Actions自动更新文章到WordPress), 可以将整个WordPress网站用Markdown直接进行管理, 还能顺便白嫖GitHub Actions的使用时长, 一举两得 ~
+zhaoolee很喜欢GitBook的布局，**左侧目录，右侧文章内容**，非常适合阅读!
 
-zhaoolee喜欢用锤子便签分享内容, 但在社交平台经常分享不出去, 于是zhaoolee建立了方圆小站, 为了让读者有类似锤子便签的良好阅读体验，这个主题便诞生了。
 
 ## 主要功能
 
