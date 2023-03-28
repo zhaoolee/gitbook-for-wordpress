@@ -12,7 +12,7 @@ jQuery(document).ready(function() {
             const offsetTop = activeItem.position().top;
 
             // 将当前容器滚动到携带 'gitbook-active' 类的 a 元素位置
-            container.animate({ scrollTop: offsetTop - (56 + 38) }, 500); // 500 毫秒动画时长，可根据需要调整
+            container.animate({ scrollTop: offsetTop - 120 }, 500); // 500 毫秒动画时长，可根据需要调整
         }
     });
 });
