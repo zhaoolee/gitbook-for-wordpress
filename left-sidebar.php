@@ -1,15 +1,39 @@
 <?php
-$post_query = new WP_Query(
-    array(
-        'post_type' => 'post',
-        'posts_per_page' => -1,
-        // 显示所有文章
-        'orderby' => 'date',
-        'order' => 'DESC'
-    )
+// 获取提交的分类ID
+$category_id = isset($_GET['post_category']) ? intval($_GET['post_category']) : '';
+
+// 构建查询参数
+$query_args = array(
+    'post_type' => 'post',
+    'posts_per_page' => -1,
+    'orderby' => 'date',
+    'order' => 'DESC',
 );
 
-if ($post_query->have_posts()): ?>
+// 如果指定了分类ID，则添加分类过滤条件
+if ($category_id) {
+    $query_args['cat'] = $category_id;
+}
+
+$post_query = new WP_Query($query_args);
+?>
+
+<!-- Select组件和表单 -->
+<form method="get" action="<?php echo esc_url(home_url('/')); ?>">
+    <select name="post_category" id="post_category" class="form-select custom-select-margin" onchange="this.form.submit()" >
+        <option value="">所有分类</option>
+        <?php
+        $categories = get_categories(array('orderby' => 'name', 'order' => 'ASC'));
+        foreach ($categories as $category) {
+            $selected = ($category_id == $category->term_id) ? 'selected' : '';
+            echo '<option value="' . $category->term_id . '" ' . $selected . '>' . $category->name . '</option>';
+        }
+        ?>
+    </select>
+</form>
+
+<!-- 文章列表 -->
+<?php if ($post_query->have_posts()): ?>
     <ul class="left-sidebar-post-list list-group">
         <?php while ($post_query->have_posts()):
             $post_query->the_post();
