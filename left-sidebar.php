@@ -1,6 +1,6 @@
 <?php
-// 获取提交的分类ID
-$category_id = isset($_GET['post_category']) ? intval($_GET['post_category']) : '';
+// 获取提交的分类slug
+$category_slug = isset($_GET['post_category']) ? sanitize_title($_GET['post_category']) : '';
 
 // 构建查询参数
 $query_args = array(
@@ -10,9 +10,9 @@ $query_args = array(
     'order' => 'DESC',
 );
 
-// 如果指定了分类ID，则添加分类过滤条件
-if ($category_id) {
-    $query_args['cat'] = $category_id;
+// 如果指定了分类slug，则添加分类过滤条件
+if ($category_slug) {
+    $query_args['category_name'] = $category_slug;
 }
 
 $post_query = new WP_Query($query_args);
@@ -20,13 +20,13 @@ $post_query = new WP_Query($query_args);
 
 <!-- Select组件和表单 -->
 <form method="get" action="<?php echo esc_url(home_url('/')); ?>">
-    <select name="post_category" id="post_category" class="form-select custom-select-margin" onchange="this.form.submit()" >
+    <select name="post_category" id="post_category" class="form-select custom-select-margin">
         <option value="">所有分类</option>
         <?php
         $categories = get_categories(array('orderby' => 'name', 'order' => 'ASC'));
         foreach ($categories as $category) {
-            $selected = ($category_id == $category->term_id) ? 'selected' : '';
-            echo '<option value="' . $category->term_id . '" ' . $selected . '>' . $category->name . '</option>';
+            $selected = ($category_slug == $category->slug) ? 'selected' : '';
+            echo '<option value="' . $category->slug . '" ' . $selected . '>' . $category->name . '</option>';
         }
         ?>
     </select>
@@ -41,7 +41,13 @@ $post_query = new WP_Query($query_args);
             $is_active = is_single() && $current_post_id == get_queried_object_id();
             $font_weight = $is_active ? 'font-weight-bold' : 'font-weight-normal';
             $active_class = $is_active ? 'gitbook-active' : ''; ?>
-            <a href="<?php the_permalink(); ?>" class="text-decoration-none <?php echo $active_class; ?> list-group-item <?php echo $font_weight; ?>">
+            <?php
+            // 检查文章URL是否包含查询参数
+            $post_permalink = get_permalink();
+            $separator = (false === strpos($post_permalink, '?')) ? '?' : '&';
+            $category_param = $category_slug ? $separator . 'post_category=' . $category_slug : '';
+            ?>
+            <a href="<?php echo $post_permalink . $category_param; ?>" class="text-decoration-none <?php echo $active_class; ?> list-group-item <?php echo $font_weight; ?>">
                 <li>
                     <?php the_title(); ?>
                 </li>
@@ -50,3 +56,21 @@ $post_query = new WP_Query($query_args);
     </ul>
 <?php endif;
 wp_reset_postdata(); ?>
+
+<!-- 添加JavaScript代码，实现页面加载时设置选择器值并自动提交表单 -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var postCategorySelect = document.getElementById('post_category');
+        postCategorySelect.addEventListener('change', function () {
+            this.form.submit();
+        });
+
+        // 获取当前URL中的查询参数
+        var searchParams = new URLSearchParams(window.location.search);
+
+        // 如果URL中包含'category_name'查询参数，设置选择器的值
+        if (searchParams.has('category_name')) {
+            postCategorySelect.value = searchParams.get('category_name');
+        }
+    });
+</script>
