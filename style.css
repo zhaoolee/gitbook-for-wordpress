@@ -11,12 +11,13 @@ Text Domain: my-gitbook-theme
 */
 
 body {
-  background-color: #fbf7ee !important;
+  /* background-color: #fbf7ee !important; */
   color: #635753 !important;
   font-family: "PingFang SC", "Helvetica Neue", Helvetica, Arial,
     "Hiragino Sans GB", "Microsoft Yahei", 微软雅黑, STHeiti, 华文细黑,
     sans-serif;
   overflow: hidden;
+  background: #f0dab3 url(./image/bg.jpg) !important;
 }
 
 header nav {
@@ -74,11 +75,13 @@ header .no-wrap-container {
 .site-left-right-container {
   display: flex;
   height: calc(100vh - 56px);
+
 }
 
 .left-sidebar {
   flex-basis: 300px;
   height: calc(100vh - 56px);
+
 }
 
 .left-sidebar li {
@@ -103,6 +106,7 @@ header .no-wrap-container {
 
 .left-sidebar-container {
   border-right: 1px solid #e4e8ec;
+  background-color: #fbf7ee !important;
 }
 
 .left-sidebar-container .list-group-item {
@@ -159,6 +163,7 @@ header .no-wrap-container {
   word-wrap: break-word; /* 允许在单词内换行 */
   white-space: normal; /* 让文本自然换行并合并多个空格 */
   line-height: 2;
+  background-color: #fbf7ee;
 }
 
 .right-content h2 {
@@ -168,16 +173,20 @@ header .no-wrap-container {
 /* pc */
 @media (min-width: 992px) {
   .right-content {
-    padding-left: 110px;
-    padding-right: 110px;
+    margin-left: 70px;
+    margin-right: 70px;
+    padding-left: 40px ;
+    padding-right: 40px;
   }
 }
 
 /* mobile */
 @media (max-width: 991px) {
   .right-content {
-    padding-left: 16px;
-    padding-right: 16px;
+    margin-left: 6px;
+    margin-right: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
