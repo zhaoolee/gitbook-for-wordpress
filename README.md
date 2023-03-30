@@ -64,10 +64,12 @@ zhaoolee很喜欢GitBook的布局，**左侧目录，右侧文章内容**，非�
 
 
 
-## 后续计划的更新
+## WordPress免费插件推荐列表
 
-- 持续打磨样式，优化代码结构
-- 写一份WordPress免费插件推荐列表
+| 插件名称 | 功能简介 | 下载页面 |
+| --- | --- | --- |
+| POST VIEWS COUNTER | 查看文章阅读量 |  http://www.dfactory.eu/plugins/post-views-counter/ |
+| WP Super Cache  | 对WordPress页面进行静态页缓存，但会让一些依赖PHP后端渲染的功能无法实时生效，比如更新主题后，需要手动删除WP Super Cache缓存才能看到效果 | https://wordpress.org/plugins/wp-super-cache/ |
 
 
 
