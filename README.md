@@ -35,8 +35,10 @@ zhaoolee很喜欢GitBook的布局，**左侧目录，右侧文章内容**，非�
 ## 主要功能
 
 - 侧边栏按时间倒序显示已发布文章
-- 支持按照专题过滤文章
 - 侧边栏自动将当前文章滚动到侧边栏顶部
+- 支持按照专题过滤文章列表
+![](https://user-images.githubusercontent.com/15868458/228867096-1557730d-0dd6-45ae-bb11-b4b145dffec1.png)
+
 - 移动端与PC端自适应
 - 支持评论
 - 支持搜索
@@ -44,6 +46,8 @@ zhaoolee很喜欢GitBook的布局，**左侧目录，右侧文章内容**，非�
 
 
 ![](https://user-images.githubusercontent.com/15868458/227778249-c22c50a4-4924-4548-bd93-662baeffab50.png)
+
+
 
 
 
