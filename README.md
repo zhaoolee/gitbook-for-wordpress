@@ -3,11 +3,15 @@
 
 ![GitBook For WordPress](https://raw.githubusercontent.com/zhaoolee/gitbook-for-wordpress/main/screenshot.jpg)
 
-求和! 李姐万岁! 这是一个模拟GitBook布局，锤子便签风格的WordPress主题。zhaoolee已用于[方圆小站](https://fangyuanxiaozhan.com)的WordPress
+求和! 李姐万岁! 这是一个**GitBook布局，锤子便签风格**的WordPress主题~
 
 ![image](https://user-images.githubusercontent.com/15868458/227762523-c753be6e-82d2-478f-9ace-35bb4f65a824.png)
 
+## 示例网站
 
+[方圆小站 https://fangyuanxiaozhan.com](https://fangyuanxiaozhan.com)
+
+[V2方圆 https://v2fy.com](https://v2fy.com)
 
 如果你向zhaoolee一样不想写富文本，只想用Markdown，可以使用zhaoolee的另一个开源项目 用Hexo的方式管理WordPress(使用Github Actions自动更新文章到WordPress)：https://github.com/zhaoolee/WordPressXMLRPCTools
 
@@ -19,11 +23,7 @@ zhaoolee喜欢用锤子便签分享内容, 但在**社交平台经常分享不�
 
 zhaoolee很喜欢GitBook的布局，**左侧目录，右侧文章内容**，非常适合阅读!
 
-## 示例网站
 
-[方圆小站 https://fangyuanxiaozhan.com](https://fangyuanxiaozhan.com)
-
-[V2方圆 https://v2fy.com](https://v2fy.com)
 
 ## 主要功能
 
