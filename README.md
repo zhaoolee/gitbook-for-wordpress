@@ -12,18 +12,6 @@
 如果你向zhaoolee一样不想写富文本，只想用Markdown，可以使用zhaoolee的另一个开源项目 用Hexo的方式管理WordPress(使用Github Actions自动更新文章到WordPress)：https://github.com/zhaoolee/WordPressXMLRPCTools
 
 
-## 示例网站
-
-[方圆小站 https://fangyuanxiaozhan.com](https://fangyuanxiaozhan.com)
-
-- 支持宽窄屏自适应
-
-![1679811878976jke7xdWQ](https://user-images.githubusercontent.com/15868458/227762273-0c0a143c-0f63-461f-a81c-b04fd44ec839.gif)
-
-- 支持搜索
-
-![1679812197742NJW5ZNBE](https://user-images.githubusercontent.com/15868458/227762298-12e9e3ac-c196-4800-85e1-dd802b4ac4c8.gif)
-
 
 ## 为什么要开发这个主题？
 
@@ -31,17 +19,41 @@ zhaoolee喜欢用锤子便签分享内容, 但在**社交平台经常分享不�
 
 zhaoolee很喜欢GitBook的布局，**左侧目录，右侧文章内容**，非常适合阅读!
 
+## 示例网站
+
+[方圆小站 https://fangyuanxiaozhan.com](https://fangyuanxiaozhan.com)
+
+[V2方圆 https://v2fy.com](https://v2fy.com)
 
 ## 主要功能
 
-- 侧边栏按时间倒序显示已发布文章
+- 无需像GitBook一样定制目录, 侧边栏按时间倒序显示已发布文章
+
+![目录](https://user-images.githubusercontent.com/15868458/228869086-10a15187-e528-4986-9fd0-5a89474ce7d4.png)
+
+
 - 侧边栏自动将当前文章滚动到侧边栏顶部
+
+![image](https://user-images.githubusercontent.com/15868458/228868598-1269a5bd-1a8a-46ad-9775-d7a1ccaae0f8.png)
+
+
 - 支持按照专题过滤文章列表
 ![](https://user-images.githubusercontent.com/15868458/228867096-1557730d-0dd6-45ae-bb11-b4b145dffec1.png)
 
-- 移动端与PC端自适应
-- 支持评论
+- 支持宽窄屏自适应
+
+![1679811878976jke7xdWQ](https://user-images.githubusercontent.com/15868458/227762273-0c0a143c-0f63-461f-a81c-b04fd44ec839.gif)
+
+
+- 支持锤子便签风格的评论
+
+![image](https://user-images.githubusercontent.com/15868458/228868043-5915449d-73dc-4db0-93f0-a262fb7dd054.png)
+
+
 - 支持搜索
+
+![1679812197742NJW5ZNBE](https://user-images.githubusercontent.com/15868458/227762298-12e9e3ac-c196-4800-85e1-dd802b4ac4c8.gif)
+
 - 底部预留备案号位置，支持自定义，不填就不显示
 
 
@@ -66,6 +78,14 @@ ln -s ~/github/gitbook-for-wordpress /Applications/MAMP/htdocs/fangyuanxiaozhan/
 ```
 
 
-## 开发者对项目《求和!李姐万岁! GitBook For WordPress》的随想录
+## 《求和!李姐万岁! GitBook For WordPress》开发者随想录(zhaoolee)
 
 [求和!李姐万岁!用ChatGPT写GitBook布局锤子便签配色的WordPress主题](https://fangyuanxiaozhan.com/p/2023-03-26-13-04-25-gitbook-for-wordpress/)
+
+[GitBook锤子便签风格WordPress主题的专题设计思考](https://fangyuanxiaozhan.com/p/2023-03-30-19-20-51-gitbook-wordpress/)
+
+
+
+
+
+
