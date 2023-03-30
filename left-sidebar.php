@@ -20,7 +20,7 @@ $post_query = new WP_Query($query_args);
 
 <!-- Select组件和表单 -->
 <form method="get" action="<?php echo esc_url(home_url('/')); ?>">
-    <select name="post_category" id="post_category" class="form-select custom-select-margin">
+    <select name="post_category" class="post_category form-select custom-select-margin">
         <option value="">所有分类</option>
         <?php
         $categories = get_categories(array('orderby' => 'name', 'order' => 'ASC'));
@@ -60,17 +60,21 @@ wp_reset_postdata(); ?>
 <!-- 添加JavaScript代码，实现页面加载时设置选择器值并自动提交表单 -->
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        var postCategorySelect = document.getElementById('post_category');
-        postCategorySelect.addEventListener('change', function () {
-            this.form.submit();
+        var postCategorySelects = document.querySelectorAll('.post_category');
+
+        // 为每个匹配的<select>元素添加事件监听器
+        postCategorySelects.forEach(function (postCategorySelect) {
+            postCategorySelect.addEventListener('change', function () {
+                this.form.submit();
+            });
+
+            // 获取当前URL中的查询参数
+            var searchParams = new URLSearchParams(window.location.search);
+
+            // 如果URL中包含'category_name'查询参数，设置选择器的值
+            if (searchParams.has('category_name')) {
+                postCategorySelect.value = searchParams.get('category_name');
+            }
         });
-
-        // 获取当前URL中的查询参数
-        var searchParams = new URLSearchParams(window.location.search);
-
-        // 如果URL中包含'category_name'查询参数，设置选择器的值
-        if (searchParams.has('category_name')) {
-            postCategorySelect.value = searchParams.get('category_name');
-        }
     });
 </script>
