@@ -1,0 +1,31 @@
+# .gitignore
+
+# Node.js dependencies
+node_modules/
+
+# Build files
+dist/
+
+# Configuration files
+.env
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.sublime*
+*.swp
+*.swo
+
+# Cache files
+*.sass-cache
+*.scss-cache
+*.less-cache
+
+# Log files
+*.log
+
+# Backup files
+*~
+*.bak

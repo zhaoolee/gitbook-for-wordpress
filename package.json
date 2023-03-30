@@ -1,0 +1,28 @@
+{
+  "name": "gitbook-for-wordpress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "search-form.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node-sass style.scss style.css",
+    "dev": "npm run compile:sass && node-sass style.scss style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhaoolee/gitBook-for-wordPress.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhaoolee/gitBook-for-wordPress/issues"
+  },
+  "homepage": "https://github.com/zhaoolee/gitBook-for-wordPress#readme",
+  "devDependencies": {
+    "css-loader": "^6.7.3",
+    "node-sass": "^8.0.0",
+    "sass-loader": "^13.2.2",
+    "style-loader": "^3.3.2"
+  }
+}
