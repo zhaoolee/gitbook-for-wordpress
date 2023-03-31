@@ -92,8 +92,8 @@ header {
 }
 
 .left-sidebar {
-  flex-basis: 300px;
   height: calc(100vh - 56px);
+  width: 350px;
 }
 
 .left-sidebar,
@@ -104,13 +104,13 @@ header {
 }
 
 .left-sidebar-container {
+  // width: 350px;
   border-right: 1px solid #e4e8ec;
   background-color: $color-background;
   .left-sidebar {
     .left-sidebar-post-list {
-      width: 300px;
       overflow-y: auto;
-      height: calc(100vh - 56px);
+      height: calc(100vh - 120px);
       .gitbook-active {
         color: #000;
         font-weight: bold;
@@ -146,7 +146,7 @@ header {
     .left-sidebar-post-list {
       width: auto;
       overflow-y: auto;
-      height: calc(100vh - 56px);
+      height: calc(100vh - 120px);
 
       .list-group-item {
         background-color: $color-background;
@@ -161,6 +161,8 @@ header {
       padding: 0;
       background-color: $color-background;
       color: $color-primary;
+      display: flex;
+      flex-direction: column;
       .gitbook-active {
         color: #000;
         font-weight: bold;

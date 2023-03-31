@@ -62,8 +62,8 @@ header .navbar-left {
   height: calc(100vh - 56px); }
 
 .left-sidebar {
-  flex-basis: 300px;
-  height: calc(100vh - 56px); }
+  height: calc(100vh - 56px);
+  width: 350px; }
 
 .left-sidebar li,
 .left-sidebar-mobile li {
@@ -73,9 +73,8 @@ header .navbar-left {
   border-right: 1px solid #e4e8ec;
   background-color: #fbf7ee !important; }
   .left-sidebar-container .left-sidebar .left-sidebar-post-list {
-    width: 300px;
     overflow-y: auto;
-    height: calc(100vh - 56px); }
+    height: calc(100vh - 120px); }
     .left-sidebar-container .left-sidebar .left-sidebar-post-list .gitbook-active {
       color: #000;
       font-weight: bold;
@@ -98,7 +97,7 @@ header .navbar-left {
   .left-sidebar-container .left-sidebar-mobile .left-sidebar-post-list {
     width: auto;
     overflow-y: auto;
-    height: calc(100vh - 56px); }
+    height: calc(100vh - 120px); }
     .left-sidebar-container .left-sidebar-mobile .left-sidebar-post-list .list-group-item {
       background-color: #fbf7ee !important;
       color: #635753 !important;
@@ -107,7 +106,9 @@ header .navbar-left {
   .left-sidebar-container .left-sidebar-mobile .offcanvas-body {
     padding: 0;
     background-color: #fbf7ee !important;
-    color: #635753 !important; }
+    color: #635753 !important;
+    display: flex;
+    flex-direction: column; }
     .left-sidebar-container .left-sidebar-mobile .offcanvas-body .gitbook-active {
       color: #000;
       font-weight: bold;
