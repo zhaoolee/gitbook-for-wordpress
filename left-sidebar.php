@@ -34,7 +34,7 @@ $post_query = new WP_Query($query_args);
 
 <!-- 文章列表 -->
 <?php if ($post_query->have_posts()): ?>
-    <ul class="left-sidebar-post-list list-group">
+    <ul class="left-sidebar-post-list list-group no-border-radius">
         <?php while ($post_query->have_posts()):
             $post_query->the_post();
             $current_post_id = get_the_ID();
@@ -65,7 +65,18 @@ wp_reset_postdata(); ?>
         // 为每个匹配的<select>元素添加事件监听器
         postCategorySelects.forEach(function (postCategorySelect) {
             postCategorySelect.addEventListener('change', function () {
-                this.form.submit();
+                var form = this.form;
+                var actionURL = new URL(form.action);
+                if (this.value === '') {
+                    this.name = '';
+                    // 跳转到根路由
+                    window.location.href = actionURL.origin + actionURL.pathname;
+                } else {
+                    this.name = 'post_category';
+                    actionURL.searchParams.set('post_category', this.value);
+                    form.action = actionURL.toString();
+                    form.submit();
+                }
             });
 
             // 获取当前URL中的查询参数
@@ -74,6 +85,22 @@ wp_reset_postdata(); ?>
             // 如果URL中包含'category_name'查询参数，设置选择器的值
             if (searchParams.has('category_name')) {
                 postCategorySelect.value = searchParams.get('category_name');
+            }
+        });
+
+        var postLists = document.querySelectorAll('.left-sidebar-post-list');
+        var isAnyPostActive = false;
+
+        postLists.forEach(function (postList) {
+            var postLinks = postList.querySelectorAll('a');
+            postLinks.forEach(function (postLink) {
+                if (postLink.classList.contains('gitbook-active')) {
+                    isAnyPostActive = true;
+                }
+            });
+
+            if (!isAnyPostActive && postLinks.length > 0 && postCategorySelects[0].value !== '') {
+                window.location.href = postLinks[0].href;
             }
         });
     });

@@ -17,6 +17,9 @@ body {
   overflow: hidden;
   background: #f0dab3 url(./image/bg.jpg) !important; }
 
+.no-border-radius {
+  border-radius: 0 !important; }
+
 header nav {
   border-bottom: 1px solid #e4e8ec;
   background: -webkit-linear-gradient(top, #827265, #716053) !important; }
@@ -96,13 +99,15 @@ header .navbar-left {
     width: auto;
     overflow-y: auto;
     height: calc(100vh - 56px); }
+    .left-sidebar-container .left-sidebar-mobile .left-sidebar-post-list .list-group-item {
+      background-color: #fbf7ee !important;
+      color: #635753 !important;
+      border: 0 !important;
+      border-radius: 0px !important; }
   .left-sidebar-container .left-sidebar-mobile .offcanvas-body {
     padding: 0;
     background-color: #fbf7ee !important;
     color: #635753 !important; }
-    .left-sidebar-container .left-sidebar-mobile .offcanvas-body .list-group-item {
-      background-color: #fbf7ee !important;
-      color: #635753 !important; }
     .left-sidebar-container .left-sidebar-mobile .offcanvas-body .gitbook-active {
       color: #000;
       font-weight: bold;
