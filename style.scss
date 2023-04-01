@@ -146,7 +146,8 @@ header {
     .left-sidebar-post-list {
       width: auto;
       overflow-y: auto;
-      height: calc(100vh - 120px);
+      display: flex;
+      flex-direction: column;
 
       .list-group-item {
         background-color: $color-background;
@@ -187,6 +188,10 @@ header {
   white-space: normal; /* 让文本自然换行并合并多个空格 */
   line-height: 2;
   background-color: $color-background;
+
+  .post-content{
+    overflow-x: scroll;
+  }
 
   h2 {
     line-height: 2;
