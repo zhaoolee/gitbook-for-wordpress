@@ -61,6 +61,12 @@ zhaoolee很喜欢GitBook的布局，**左侧目录，右侧文章内容**，非�
 
 
 
+- 支持显示后台菜单
+
+![](https://user-images.githubusercontent.com/15868458/230023019-c66fb93a-cfbb-469b-a44f-7161ab32d999.png)
+
+![](https://user-images.githubusercontent.com/15868458/230023799-baef2fa6-0afa-46fd-a86b-17a57e1dc994.png)
+
 
 
 
