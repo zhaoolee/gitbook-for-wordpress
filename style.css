@@ -5,10 +5,10 @@ Theme URI: https://github.com/zhaoolee/gitbook-for-wordpress
 Author: zhaoolee
 Author URI: https://zhaoolee.com
 Description: GitBook布局锤子便签配色的WordPress主题
-Version: 0.1.6
+Version: 0.1.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: my-gitbook-theme
+Text Domain: github-com-zhaoolee-gitbook-for-wordpress
 */
 body {
   /* background-color: $color-background; */
@@ -23,6 +23,24 @@ body {
 header nav {
   border-bottom: 1px solid #e4e8ec;
   background: -webkit-linear-gradient(top, #827265, #716053) !important; }
+  header nav #headerMenuModal .modal-content {
+    z-index: 100;
+    border-radius: 6px;
+    background: #f0dab3 url(./image/bg.jpg) !important;
+    max-height: 60vh; }
+    header nav #headerMenuModal .modal-content .list-group {
+      border-radius: 5px;
+      overflow: scroll;
+      background-color: #fbf7ee !important; }
+      header nav #headerMenuModal .modal-content .list-group a {
+        text-decoration: none; }
+      header nav #headerMenuModal .modal-content .list-group .list-group-item {
+        border: none;
+        font-weight: 600;
+        color: #635753; }
+        header nav #headerMenuModal .modal-content .list-group .list-group-item:hover {
+          background-color: #f0ece2;
+          color: #635753 !important; }
 
 header .bg-light {
   color: #ffffff !important; }
@@ -49,6 +67,19 @@ header .navbar-left {
   align-items: center; }
   header .navbar-left .navbar-toggler {
     margin-right: 20px; }
+
+header .search-and-menu {
+  display: flex; }
+  header .search-and-menu .top-menu-btn {
+    font-size: 16px;
+    font-weight: 600;
+    background: -webkit-linear-gradient(top, #827265, #716053);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s; }
+    header .search-and-menu .top-menu-btn:hover {
+      background-color: #1d1f20; }
 
 .custom-select-margin {
   margin-left: 16px;

@@ -7,7 +7,7 @@ Description: GitBook布局锤子便签配色的WordPress主题
 Version: 0.1.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: my-gitbook-theme
+Text Domain: github-com-zhaoolee-gitbook-for-wordpress
 */
 
 $color-primary: #635753 !important;
@@ -40,6 +40,34 @@ header {
       $color-gradient-top,
       $color-gradient-bottom
     ) !important;
+
+    #headerMenuModal{
+      .modal-content {
+        z-index: 100;
+        border-radius: 6px;
+        background: #f0dab3 url(./image/bg.jpg) !important;
+        max-height: 60vh;
+        .list-group {
+          border-radius: 5px;
+          overflow: scroll;
+          background-color: $color-background;
+          a {
+            text-decoration: none;
+          }
+          .list-group-item {
+            border: none;
+            &:hover{
+              background-color: #f0ece2;
+              color: $color-primary;
+            }
+            font-weight: 600;
+            color: $color-text;
+            
+          }
+
+        }
+      }
+    }
   }
 
   .bg-light {
@@ -75,6 +103,24 @@ header {
     .navbar-toggler {
       margin-right: 20px;
     }
+  }
+
+  .search-and-menu {
+    display: flex;
+
+    .top-menu-btn {
+      font-size: 16px;
+      font-weight: 600;
+      background: -webkit-linear-gradient(top, #827265, #716053);
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      &:hover {
+        background-color: #1d1f20;
+      }
+    }
+
   }
 }
 

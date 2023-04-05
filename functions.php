@@ -124,3 +124,34 @@ function my_customizer_settings($wp_customize) {
   ));
 }
 add_action('customize_register', 'my_customizer_settings');
+
+
+class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
+  function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
+      $url = $item->url;
+      $title = $item->title;
+      $output .= "<a href='$url'><li class='list-group-item'>$title</li></a>";
+  }
+}
+
+// 注册菜单位置
+function register_my_menus() {
+  register_nav_menus(array(
+      'primary' => __('Gitbook Menu', 'github-com-zhaoolee-gitbook-for-wordpress'),
+  ));
+}
+
+add_action('init', 'register_my_menus');
+
+
+function is_menu_empty($location) {
+  $menu_locations = get_nav_menu_locations();
+  if (isset($menu_locations[$location])) {
+      $menu = wp_get_nav_menu_object($menu_locations[$location]);
+      if ($menu && !empty($menu->term_id)) {
+          $menu_items = wp_get_nav_menu_items($menu->term_id);
+          return empty($menu_items);
+      }
+  }
+  return true;
+}
