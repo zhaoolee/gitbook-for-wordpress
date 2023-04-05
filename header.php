@@ -38,6 +38,7 @@
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                     <div class="modal-content">
                         <div class="modal-body">
+                            <div class="body-content-container">
                             <!-- 展示菜单 -->
                             <ul class="list-group">
                             <?php
@@ -50,6 +51,7 @@
                                 wp_nav_menu($menu_args);
                             ?>
                             </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

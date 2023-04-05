@@ -4,7 +4,7 @@ Theme URI: https://github.com/zhaoolee/gitbook-for-wordpress
 Author: zhaoolee
 Author URI: https://zhaoolee.com
 Description: GitBook布局锤子便签配色的WordPress主题
-Version: 0.1.5
+Version: 0.1.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: github-com-zhaoolee-gitbook-for-wordpress
@@ -47,12 +47,23 @@ header {
         border-radius: 6px;
         background: #f0dab3 url(./image/bg.jpg) !important;
         max-height: 60vh;
+
+        .modal-body{
+          display: flex;
+        }
+
+        .body-content-container{
+          flex: 1;
+          overflow-y: auto;
+          border-radius: 6px;
+        }
+
         .list-group {
           border-radius: 5px;
-          overflow: scroll;
           background-color: $color-background;
           a {
             text-decoration: none;
+
           }
           .list-group-item {
             border: none;
@@ -62,6 +73,15 @@ header {
             }
             font-weight: 600;
             color: $color-text;
+
+            white-space: nowrap;     /* 使文本在一行内显示，不换行 */
+            overflow: hidden;        /* 超出容器宽度的内容将被隐藏 */
+            text-overflow: ellipsis; /* 超出容器宽度的文本将以省略号表示 */
+            max-width: 100%; 
+
+
+
+
             
           }
 
