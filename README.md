@@ -121,14 +121,13 @@ zhaoolee很喜欢GitBook的布局，**左侧目录，右侧文章内容**，非�
 </script>
 ```
 
-
 ## WordPress免费插件推荐列表
 
 | 插件名称 | 功能简介 | 下载页面 |
 | --- | --- | --- |
 | POST VIEWS COUNTER | 查看文章阅读量 |  http://www.dfactory.eu/plugins/post-views-counter/ |
 | WP Super Cache  | 对WordPress页面进行静态页缓存，但会让一些依赖PHP后端渲染的功能无法实时生效，比如更新主题后，需要手动删除WP Super Cache缓存才能看到效果 | https://wordpress.org/plugins/wp-super-cache/ |
-
+| instant.page | 用户鼠标滑到超链接时, 预加载网页, 提升页面打开速度 | https://wordpress.org/plugins/instant-page/ |
 
 ## 开发小技巧:将开发的主题,软连接到WordPress Theme目录
 
@@ -142,8 +141,6 @@ ln -s ~/github/gitbook-for-wordpress /Applications/MAMP/htdocs/fangyuanxiaozhan/
 [求和!李姐万岁!用ChatGPT写GitBook布局锤子便签配色的WordPress主题](https://fangyuanxiaozhan.com/p/2023-03-26-13-04-25-gitbook-for-wordpress/)
 
 [GitBook锤子便签风格WordPress主题的专题设计思考](https://fangyuanxiaozhan.com/p/2023-03-30-19-20-51-gitbook-wordpress/)
-
-
 
 
 
