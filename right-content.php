@@ -7,5 +7,11 @@
             <?php comments_template(); ?>
         <?php endwhile; ?>
     <?php endif; ?>
+
+    <?php if ( is_active_sidebar( 'right-sidebar' ) ) : ?>
+        <div class="right-content-sidebar">
+            <?php dynamic_sidebar( 'right-sidebar' ); ?>
+        </div>
+    <?php endif; ?>
     <?php require 'footer-container.php' ?>
 </div>

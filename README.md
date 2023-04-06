@@ -77,7 +77,51 @@ zhaoolee很喜欢GitBook的布局，**左侧目录，右侧文章内容**，非�
 | POST VIEWS COUNTER | 查看文章阅读量 |  http://www.dfactory.eu/plugins/post-views-counter/ |
 | WP Super Cache  | 对WordPress页面进行静态页缓存，但会让一些依赖PHP后端渲染的功能无法实时生效，比如更新主题后，需要手动删除WP Super Cache缓存才能看到效果 | https://wordpress.org/plugins/wp-super-cache/ |
 
+## 自定义HTML
 
+- 来自一言的《经典台词》
+
+```html
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<h2>经典台词</h2>
+<div id="yiyan_hitokoto"></div>
+<div id="yiyan_from" style="text-align: right">
+</div>
+<script>
+        jQuery.ajax({url:'https://v1.hitokoto.cn/'}).done(function(content,err){
+        console.log("content::", content, "err::", err);
+        if(err === "success"){
+            var yiyan_hitokoto = "";
+            var yiyan_from= "";
+            console.log("content22::", content, "err::", err);
+            yiyan_hitokoto = content.hitokoto;
+            yiyan_from ="--" + content.from;
+            console.log("=yiyan_hitokoto=>>", yiyan_hitokoto);
+            console.log("=yiyan_from=>>", yiyan_from);
+            jQuery("#yiyan_hitokoto").html(yiyan_hitokoto);
+            jQuery("#yiyan_from").html(yiyan_from);
+        }
+    })
+</script>
+```
+
+- 显示当前页面二维码
+
+```html
+<h2>当前网址二维码</h2>
+<div id="qrcode"></div>
+<script src="https://v2fy.com/cdn/qrcodejs/qrcode.min.js"></script>
+<script type="text/javascript">
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+        text: window.location.href,
+        width: 256,
+        height: 256,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+    });
+</script>
+```
 
 ## 开发小技巧:将开发的主题,软连接到WordPress Theme目录
 
