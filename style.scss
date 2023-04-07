@@ -255,6 +255,14 @@ header {
   line-height: 2;
   background-color: $color-background;
 
+  .right-content-sidebar {
+
+    .widget {
+      overflow-x: auto;
+    }
+
+  }
+
   .post-content{
     overflow-x: scroll;
   }
