@@ -11,9 +11,8 @@
 
 [方圆小站 https://fangyuanxiaozhan.com](https://fangyuanxiaozhan.com)
 
-[V2方圆 https://v2fy.com](https://v2fy.com)
 
-如果你向zhaoolee一样不想写富文本，只想用Markdown，可以使用zhaoolee的另一个开源项目 用Hexo的方式管理WordPress(使用Github Actions自动更新文章到WordPress)：https://github.com/zhaoolee/WordPressXMLRPCTools
+如果你像zhaoolee一样不想写富文本，只想用Markdown，可以使用zhaoolee的另一个开源项目 用Hexo的方式管理WordPress(使用Github Actions自动更新文章到WordPress)：https://github.com/zhaoolee/WordPressXMLRPCTools
 
 
 
