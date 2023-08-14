@@ -22,7 +22,7 @@
         <div class="footer-info">
             <p>&copy;
                 <?php echo date('Y'); ?>
-                <?php bloginfo('name'); ?>. All rights reserved.
+                <?php bloginfo('name'); ?>. 版权所有.
             </p>
         </div>
     </footer>
