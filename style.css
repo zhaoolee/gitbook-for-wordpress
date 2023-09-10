@@ -5,7 +5,7 @@ Theme URI: https://github.com/zhaoolee/gitbook-for-wordpress
 Author: zhaoolee
 Author URI: https://zhaoolee.com
 Description: GitBook布局锤子便签配色的WordPress主题
-Version: 0.1.7
+Version: 0.1.8
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: github-com-zhaoolee-gitbook-for-wordpress
@@ -193,8 +193,7 @@ header .search-and-menu {
     padding: 16px; }
   .right-content code {
     border-radius: 3px;
-    font-size: 14px;
-    padding: 1px 5px; }
+    font-size: 14px; }
   .right-content a {
     text-decoration: none;
     color: #635753 !important;
