@@ -478,39 +478,62 @@ header {
 .pagination {
   display: flex;
   justify-content: center;
-  list-style: none;
-  padding: 0;
-  margin: 20px 0;
+  align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap; // 允许在小屏幕上换行
 
-  li {
-    margin: 0 5px;
-  }
-
-  a,
-  span {
-    display: block;
-    padding: 5px 10px;
-    background-color: $color-background;
+  .page-numbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 36px; // 增加最小宽度
+    height: 36px; // 增加高度
+    margin: 0 5px 10px; // 增加水平间距，并添加垂直间距
+    padding: 0 5px; // 添加水平内边距
     border-radius: 4px;
-    font-size: 16px;
-    color: $color-text;
+    font-size: 14px;
     text-decoration: none;
-    border: 1px solid #ccc;
-
+    transition: all 0.3s ease;
+    
+    // 默认状态
+    color: #666;
+    background-color: #f0f0f0;
+    
+    // 鼠标悬停状态
     &:hover {
-      background-color: $color-primary;
       color: #fff;
-      border-color: $color-primary;
+      background-color: #888;
+    }
+    
+    // 当前页面状态
+    &.current {
+      color: #fff;
+      background-color: #666;
     }
   }
 
-  .current {
-    background-color: $color-primary;
-    color: #fff;
-    border-color: $color-primary;
+  .prev, .next {
+    padding: 0 10px; // 增加水平内边距
+    
+    // 鼠标悬停状态
+    &:hover {
+      color: #fff;
+      background-color: #888;
+    }
   }
 }
 
+// 添加媒体查询以在小屏幕上调整样式
+@media (max-width: 480px) {
+  .pagination {
+    .page-numbers {
+      min-width: 32px; // 在小屏幕上稍微减小尺寸
+      height: 32px;
+      font-size: 12px; // 减小字体大小
+      margin: 0 3px 6px; // 减小间距
+    }
+  }
+}
 /* Footer */
 .site-footer {
   background-color: $color-footer;
