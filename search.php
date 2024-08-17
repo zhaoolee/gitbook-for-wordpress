@@ -13,7 +13,7 @@
         </header>
         <?php
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-        $posts_per_page = 5; // 每页显示的文章数量
+        $posts_per_page = 10; // 每页显示的文章数量
         $args = array(
             's' => get_search_query(),
             'posts_per_page' => $posts_per_page,
