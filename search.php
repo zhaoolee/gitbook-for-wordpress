@@ -17,7 +17,10 @@
         $args = array(
             's' => get_search_query(),
             'posts_per_page' => $posts_per_page,
-            'paged' => $paged
+            'paged' => $paged,
+            'no_found_rows' => false, // 确保计算总行数
+            'update_post_meta_cache' => false, // 优化查询性能
+            'update_post_term_cache' => false, // 优化查询性能
         );
         $search_query = new WP_Query($args);
 
@@ -53,6 +56,12 @@
                 'prev_text' => __('&laquo; Previous'),
                 'next_text' => __('Next &raquo;'),
             ));
+            echo '</div>';
+
+            // 显示实际的搜索结果统计
+            echo '<div class="search-stats">';
+            printf(__('Found %1$s results. Showing page %2$s of %3$s.', 'your_theme_text_domain'), 
+                   $total_posts, $paged, $max_pages);
             echo '</div>';
 
             wp_reset_postdata();
