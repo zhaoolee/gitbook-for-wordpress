@@ -40,10 +40,14 @@
             $max_pages = ceil($total_posts / $posts_per_page);
 
             // Pagination
+            global $wp_rewrite;
+            $search_query_string = get_search_query();
+            $pagination_base = $wp_rewrite->search_base . '/' . urlencode($search_query_string) . '/page/';
+            
             echo '<div class="pagination">';
             echo paginate_links(array(
-                'base' => get_pagenum_link(1) . '%_%',
-                'format' => 'page/%#%',
+                'base' => home_url($pagination_base . '%#%'),
+                'format' => '%#%',
                 'current' => $paged,
                 'total' => $max_pages,
                 'prev_text' => __('&laquo; Previous'),
